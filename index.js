@@ -29,6 +29,4 @@ function mover(){
     }
   });
 }
-$(document).ready(function() {
-  mover();
-});
+mover();
