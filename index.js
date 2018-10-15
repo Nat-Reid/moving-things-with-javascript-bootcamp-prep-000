@@ -14,7 +14,7 @@ function moveDodgerRight() {
   var leftNumbers = dodger.style.left.replace('px', '');
   var left = parseInt(leftNumbers, 10);
 
-  if (left < 360) {
+  if (left < 360/* width of game - width of dodger*/) {
     dodger.style.left = `${left + 10}px`;
   }
 }
@@ -29,4 +29,6 @@ function mover(){
     }
   });
 }
-mover();
+$(document).ready(function() {
+  mover();
+});
